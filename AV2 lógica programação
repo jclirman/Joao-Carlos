@@ -1,0 +1,27 @@
+procedimento atender
+var
+   ler_op: caracter
+   opcao: logico
+   xi: inteiro
+inicio
+   opcao := Verdadeiro
+   enquanto opcao faca
+      limpatela
+      escreval("Atendimento de Pedidos")
+      escreval("----------------------")
+      escreval(" ")
+      escreval("Confirmar atendimento do Pedido: ",pedido[xi+1])
+      para xi de 1 ate itens - 1 faca
+         se (pedido[xi]:=Cod_Pedido) entao
+            pedido[xi]:= pedido[xi]+" :Pedido Atendido"
+            escreval("Pedido atendido com sucesso")
+         senao
+            escreval("Não há pedidos na fila.")
+         fimse
+      fimpara
+      
+      escreval("Tecle <<enter>> pra continuar  ")
+      leia(opcao)
+      escreval(" ")
+
+fimprocedimento
